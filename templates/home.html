@@ -1,0 +1,18 @@
+<h1>
+  Todo Home
+</h1>
+
+<form>
+  <input type="text" placeholder="New ToDo" ng-model="newTodo">
+  <button type="submit" ng-click="postToDo()">Submit ToDo</button>
+</form>
+
+<h1>Todos</h1>
+<div class="todoList">
+
+  <ul>
+    <li ng-repeat="todo in todos">
+      <a ui-sref="list({listType: todo.todo})">{{todo.todo}}</a>
+    </li>
+  </ul>
+</div>
